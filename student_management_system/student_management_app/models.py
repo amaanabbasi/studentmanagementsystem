@@ -23,13 +23,13 @@ class MarkList(models.Model):
 
     student_uid = models.CharField(max_length=64, unique=True)
     student_name = models.CharField(max_length=100)
-    # Since we have only one course (i.e Computer Science), for now. 
-    # We are putting it as default.
+    marks_scored_percentage = models.FloatField()
+    
+    # Since we have only one course (i.e Computer Science). 
     course_name = models.CharField(max_length=20, default="Computer Science")
+
     # Year in which exam is conducted, we only have to only store the year not the date.
     year = models.PositiveSmallIntegerField(blank=True, null=True)
-    marks_scored_percentage = models.FloatField()
-
 
     def __str__(self):
         return self.student_name + " " + self.course_name + " " +  str(self.year) 
