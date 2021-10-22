@@ -1,9 +1,19 @@
 
 
-/api/v1/student/list -> Get list of students 
+GET /api/v1/student/list -> Get list of students 
 
-/api/v1/student/create -> Create students
+POST /api/v1/student/create -> Create students
 
-/api/v1/student/update/<int:pk> -> Update Student
+UPDATE /api/v1/student/update/<int:pk> -> Update Student
 
-/api/v1/student/<int:pk>/delete/ -> Delete Student
+DELETE /api/v1/student/<int:pk>/delete/ -> Delete Student
+
+
+
+GET /api/v1/marklist/list -> Get marklist
+
+POST /api/v1/marklist/create -> Create marklists
+
+UPDATE /api/v1/marklist/update/<int:pk> -> Update marklist
+
+DELETE /api/v1/marklist/<int:pk>/delete/ -> Delete marklist

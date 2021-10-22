@@ -19,7 +19,7 @@ class Student(models.Model):
 class MarkList(models.Model):  
 
     # We could also use a onetoone relation with the student, but I'm assuming we don't have to create a R/S
-    # student_uid = models.OneToOneField('Student', to_field='uid',primary_key=True, related_name='student_uid', on_delete=models.CASCADE)
+    # student_uid = models.OneToOneField('Student', to_field='uid',primary_key=True, related_name='student_uid', on_delete=models.SET_NULL)
 
     student_uid = models.CharField(max_length=64, unique=True)
     student_name = models.CharField(max_length=100)
