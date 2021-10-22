@@ -1,3 +1,15 @@
+# Installation
+
+* python3 -m venv venv (create a virtual env)
+* source venv/bin/activate (activate virtual env)
+* pip install -r requirements.txt (install dependencies)
+
+# Run 
+
+* python3 manage.py runserver
+
+goto `http://localhost:8000/api/v1/list/`
+
 
 # Student API
 

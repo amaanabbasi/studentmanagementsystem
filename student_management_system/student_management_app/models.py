@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import indexes
 
 # Create your models here.
 class Student(models.Model):  
@@ -10,7 +11,11 @@ class Student(models.Model):
     guardian_phone_number = models.CharField(max_length=10, )
     guardian_email = models.EmailField()
     uid = models.CharField(max_length=64, unique=True)
-  
+    
+    class Meta:
+        indexes = [
+            models.Index(fields=['name'])
+        ]
 
     def __str__(self):
         return self.name
